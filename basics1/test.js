@@ -13,8 +13,12 @@ let accountStatus;
 // const values should be fixed 
 console.log(accountId);
 
+// let we will use NO Var because of issues of functional and block scope
+
 accountEmail = "piya4578@gmail.com";
 accountPassword  = "121212";
 accountCity = "Jaipur";
+
+
 
 console.table([accountEmail,accountPassword,accountCity,accountStatus]);
