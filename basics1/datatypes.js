@@ -20,8 +20,10 @@ let state; // Undefined
 // undefined => value is not assigned yet
 // symbol => unique (for indiviudal components)
 
-
-// OBJECT:
+//NON PRIMITIVE
+// Object => stores data as key value pair
+// Array  => store similar data
+// Function  => to perform specific task 
 
 console.log(typeof age) // gives 'number'
 console.log(typeof null) // gives object

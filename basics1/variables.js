@@ -9,7 +9,7 @@ let accountStatus;
 
 
 // accountId = 678;   
-// const : assignment to cont variable generate type error
+// const : assignment to const variable generate type error
 // const values should be fixed 
 console.log(accountId);
 
