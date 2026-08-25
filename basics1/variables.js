@@ -14,7 +14,7 @@ let accountStatus;
 console.log(accountId);
 
 // let we will use NO Var because of issues of functional and block scope
-// A variable declared using let is block-scoped.
+// A variable declared using let is block-scoped. 
 // A variable declared using var is function-scoped, not block-scoped.
 
 accountEmail = "piya4578@gmail.com";

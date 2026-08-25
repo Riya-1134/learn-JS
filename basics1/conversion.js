@@ -1,3 +1,4 @@
+// Number conversion
 let score = "33";
 console.log(typeof(score));  //string
 
@@ -34,3 +35,32 @@ console.log(typeof(valueinNumber)); //number
 // if "53ajnfkfn" => nan (number is datatype)
 // null => 0 
 // true or false will give 1 0r 0
+
+
+
+// Bool conversion
+let islogged = 1;
+let isbool = Boolean(islogged);  
+console.log(isbool); //true
+
+islogged = "";
+isbool = Boolean(islogged); 
+console.log(isbool);  // false
+
+
+//summary 
+// 1 => true  
+// 0 => false
+// "Riya" = > true
+// "" (empty string) => false;
+
+
+
+// string conversion
+
+let isNumber = 35;
+let isString = String(isNumber);
+
+console.log(isString);   //35
+console.log(typeof isString);  //STRING 
+
