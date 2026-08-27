@@ -10,8 +10,19 @@ let name = "Riya" // stringnod
 let age = 22 // number
 let isLoggedin = false // Bool
 let state; // Undefined
+let bignumber = 32520572052n // bigint
+let id = Symbol('123')
+let anotherid = Symbol('123')
 
-// PRIMITIVE DATATYPES:
+console.log(id === anotherid);   // false
+
+
+
+
+
+
+//Javascript is Dynamically types language it means we dont define the datatype of a variable
+// PRIMITIVE DATATYPES: 7
 // number => 2 to power 53
 // bigint => very big numbers
 // string => " "
@@ -30,3 +41,21 @@ console.log(typeof null) // gives object
 console.log(typeof undefined) // undefined
 
 console.table([typeof age, typeof null, typeof undefined])
+
+
+
+//Non Primitive or reference type  : array , object (object function ), function all datatypes is function only 
+
+const heros = ["Apple", "Banana", "Strawberry"] // array
+
+
+let person = {
+    name: "Riya",
+    age: 22,
+}
+
+
+const myfunct = function() {
+    console.log("Hello World")
+
+}
