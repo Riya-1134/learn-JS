@@ -1,4 +1,14 @@
-console.log(x);
+// console.log(x); // not defined
 
-let y;
-console.log(typeof(x));
+let y; //undefined 
+
+if(y === undefined){
+    console.log("is undefined");
+    
+}
+else {
+    console.log("not undefined");
+    
+}
+
+// javascript is loosely tight language and dynamic typed too 
