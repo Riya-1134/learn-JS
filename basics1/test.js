@@ -1,4 +1,4 @@
-console.log("Riya");
+
 
 // Everything inside javacript happens in Execution Context
 // it has 2 components
@@ -18,7 +18,7 @@ console.log("Riya");
 
 // what happens when a js program is created
 // An Execution Context is created has two phases => Memory Creation phase => Code Execution Phase
-// 1st Phase: allocation memory to variables (stores a undefined)and function  (whole block of code)
+// 1st Phase : allocation memory to variables (stores a undefined)and function  (whole block of code)
 
 // 2nd Phase : in phase two it places the actual value of identifier or placeholder 
 // when a function is invoked a brand new execution context is created 

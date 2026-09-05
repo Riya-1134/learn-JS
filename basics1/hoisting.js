@@ -1,9 +1,8 @@
+// Hoisting is JavaScript's behavior of allocating memory for variables and functions before the code execution phase begins.
 getName(); 
 console.log(getName);
 
-// console.log(x); // cant access x before it is even intialized => error x is undefined 
-
-
+// console.log(x); //  let and const throws Reference error cant access x before it is even intialized => but var x = 5 gives undefined
 
 
 let x = 5; // if removed and in logging it shows x is not defined
@@ -21,3 +20,6 @@ function getName() {
 
 // var getName2 = fucntion () {
 // }
+
+
+
