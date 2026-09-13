@@ -1,0 +1,62 @@
+INTERVIEW IMPORTANT QUESTION FOR JS
+For a JavaScript interview, these 5 questions are especially important:
+
+What is the difference between var, let, and const?
+Be ready to explain scope, redeclaration, reassignment, and hoisting.
+var → function scoped, can redeclare and reassign
+let → block scoped, cannot redeclare in same scope, can reassign
+const → block scoped, cannot redeclare or reassign
+
+What is hoisting in JavaScript?
+JavaScript processes declarations before executing the code.
+
+console.log(a); // undefined
+var a = 10;
+
+Also know why let and const give a ReferenceError before declaration: Temporal Dead Zone (TDZ).
+
+What is a closure in JavaScript? ⭐
+A closure happens when an inner function remembers variables from its outer function even after the outer function has finished executing.
+
+function outer() {
+  let count = 0;
+
+  return function inner() {
+    count++;
+    console.log(count);
+  };
+}
+
+const counter = outer();
+counter(); // 1
+counter(); // 2
+
+What is the difference between == and ===?
+
+5 == "5"   // true
+5 === "5"  // false
+
+== performs type coercion, while === compares both value and type.
+
+What is the JavaScript Event Loop? ⭐
+Know these terms:
+Call Stack → Web APIs → Callback/Task Queue → Microtask Queue → Event Loop
+
+Classic interview code:
+
+console.log("A");
+
+setTimeout(() => console.log("B"), 0);
+
+Promise.resolve().then(() => console.log("C"));
+
+console.log("D");
+
+Output:
+
+A
+D
+C
+B
+
+Promise callbacks (microtasks) run before setTimeout callbacks (tasks) once the synchronous stack is clear.
