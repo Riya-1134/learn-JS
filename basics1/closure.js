@@ -20,7 +20,9 @@
 
 // in js fumction can given to a variablee,can be returned can can be paased as parameter
 
-//uses: module desgin pattern , currying , funnction like once ,  memoize , maintaining state in async  world , serTimeouts , iterators
+//uses: module desgin pattern , currying , funnction like once ,  memoize , maintaining state in async  world , serTimeouts , iterators , DATA HIDING AND ENCAPSULATION
+
+//DISADVANTAGES: over consumption of memory ..as garbage collector wont collect it until program expires . memory leaks
 
 // set time out 
 

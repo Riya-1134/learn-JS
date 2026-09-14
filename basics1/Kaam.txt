@@ -60,3 +60,133 @@ C
 B
 
 Promise callbacks (microtasks) run before setTimeout callbacks (tasks) once the synchronous stack is clear.
+
+
+
+1. What is the difference between synchronous and asynchronous JavaScript?
+
+Synchronous: Code executes one line at a time. The next operation waits for the current operation to finish.
+
+console.log("A");
+console.log("B");
+console.log("C");
+
+Output: A B C
+
+Asynchronous: Some operations can be scheduled to complete later, allowing other code to continue executing.
+
+console.log("A");
+
+setTimeout(() => {
+    console.log("B");
+}, 1000);
+
+console.log("C");
+
+Output: A C B
+
+Interview answer: Synchronous code executes sequentially, while asynchronous JavaScript allows time-consuming operations to be handled without blocking the main execution flow.
+
+2. What is the Event Loop?
+
+The event loop is the mechanism that coordinates asynchronous operations in JavaScript.
+
+JavaScript has a single call stack, so it executes one piece of JavaScript at a time. Async operations can be handled by the surrounding runtime, and their callbacks are queued to run later.
+
+For example:
+
+console.log("Start");
+
+setTimeout(() => {
+    console.log("Hello");
+}, 0);
+
+console.log("End");
+
+Output:
+
+Start
+End
+Hello
+
+Even though the timer is 0ms, its callback waits until the current synchronous code and call stack are finished.
+
+Interview answer: The event loop continuously checks whether the call stack is empty and allows queued asynchronous tasks to execute when appropriate.
+
+3. What is a Callback Function?
+
+A callback is a function passed to another function so that the other function can call it.
+
+function greet(name, callback) {
+    console.log("Hello " + name);
+    callback();
+}
+
+function bye() {
+    console.log("Bye!");
+}
+
+greet("Riya", bye);
+
+Output:
+
+Hello Riya
+Bye!
+
+Here, bye is the callback function.
+
+Callbacks are commonly used with events and asynchronous operations.
+
+Interview answer: A callback is a function passed as an argument to another function to be executed by that function, often after some operation or event.
+
+4. What is a Promise?
+
+A Promise is an object representing the eventual completion or failure of an asynchronous operation.
+
+A Promise has three states:
+
+Pending → operation is still running
+Fulfilled → operation completed successfully
+Rejected → operation failed
+
+Example:
+
+let promise = new Promise((resolve, reject) => {
+    let success = true;
+
+    if (success) {
+        resolve("Data received");
+    } else {
+        reject("Error");
+    }
+});
+
+promise
+    .then(result => console.log(result))
+    .catch(error => console.log(error));
+
+Promises help organize asynchronous code and avoid deeply nested callbacks.
+
+Interview answer: A Promise represents a future result of an asynchronous operation and can be pending, fulfilled, or rejected.
+
+5. Arrow Function vs Normal Function
+
+Normal function:
+
+function add(a, b) {
+    return a + b;
+}
+
+Arrow function:
+
+const add = (a, b) => {
+    return a + b;
+};
+
+Or shorter:
+
+const add = (a, b) => a + b;
+
+The most important interview difference is this.
+
+Normal functions can have their own this depending on how they're called, while arrow functions do not have their own this; they capture this from the surrounding lexical scope.
