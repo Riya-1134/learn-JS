@@ -49,4 +49,5 @@ attacheventlistner()
 
 //Event listener are heavy required memory as even if the call stack is empty if wont free up the space of variable memory
 // system will scope 
-// garabage collection and removeeventlistener is must 
+// garabage collection and removeeventlistener is must as many listeners can consume memory and add processing/cleanup overhead.
+// The listener needs to stay registered because the browser doesn't know when you're going to click.
