@@ -38,7 +38,7 @@ What is the difference between == and ===?
 
 == performs type coercion, while === compares both value and type.
 
-What is the JavaScript Event Loop? ⭐
+What is the JavaScript Event Loop? 
 Know these terms:
 Call Stack → Web APIs → Callback/Task Queue → Microtask Queue → Event Loop
 
@@ -190,3 +190,5 @@ const add = (a, b) => a + b;
 The most important interview difference is this.
 
 Normal functions can have their own this depending on how they're called, while arrow functions do not have their own this; they capture this from the surrounding lexical scope.
+
+// What are async and await?
