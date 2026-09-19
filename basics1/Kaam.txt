@@ -192,3 +192,6 @@ The most important interview difference is this.
 Normal functions can have their own this depending on how they're called, while arrow functions do not have their own this; they capture this from the surrounding lexical scope.
 
 // What are async and await?
+Promise in JavaScript
+
+A Promise is an object used to handle an asynchronous operation.
