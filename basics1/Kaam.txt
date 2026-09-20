@@ -195,3 +195,5 @@ Normal functions can have their own this depending on how they're called, while 
 Promise in JavaScript
 
 A Promise is an object used to handle an asynchronous operation.
+
+//Synchronous code executes sequentially and waits for each operation to complete, while asynchronous code allows time-consuming operations to be handled without blocking the execution of the remaining code.
